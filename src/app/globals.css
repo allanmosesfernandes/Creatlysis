@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --createYellow: #FFF200;
+}
+
+body {
+  background-color: var(--createYellow);
+}
+
+
+.leading-36 {
+  line-height: 37px !important;
+}
+.griddy {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+}
+
+.bg-image {
+  background-image: url('../../public/images/rectangle-27.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.griddy5 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  align-items: center;
+  gap: 10px;
+  padding: 3rem 0;
+}
