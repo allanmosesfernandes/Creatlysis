@@ -14,6 +14,7 @@ body {
 .leading-36 {
   line-height: 37px !important;
 }
+
 .griddy {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
@@ -33,4 +34,39 @@ body {
   align-items: center;
   gap: 10px;
   padding: 3rem 0;
+}
+
+/* Header */
+header a.active:before {
+  display: block;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 0;
+  background-color: black;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .griddy {
+    grid-template-columns: 1fr 1fr;
+    /* Two columns on mobile */
+    grid-template-rows: auto auto;
+    /* Two rows */
+    grid-template-areas:
+      "first first"
+      "second third";
+  }
+
+  .griddy> :nth-child(1) {
+    grid-area: first;
+  }
+
+  .griddy> :nth-child(2) {
+    grid-area: second;
+  }
+
+  .griddy> :nth-child(3) {
+    grid-area: third;
+  }
 }

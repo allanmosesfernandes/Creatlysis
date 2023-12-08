@@ -59,7 +59,7 @@ const Accordion = () => {
                 <button
                 className='text-white border-white border-2 w-fit my-12'
                 onClick={() => setShowMore(!showMore)}>
-                    {showMore ? <BlackBtn text={"Show Less"} /> : <BlackBtn text={"Show More"} />}
+                    {showMore ? <BlackBtn text={"Show Less"} /> : <BlackBtn text={"Show More"} goTo="/" />}
                 </button>
                 {
                     showMore ? <p className='text-white'>Have more queries? Reach us on hello@creatalysis.com</p> : ""

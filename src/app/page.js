@@ -1,12 +1,13 @@
 import Image from 'next/image'
 import services from "../utils/services";
 import Accordion from '@/components/accordion';
+import YellowBtn from '@/components/buttons/yellowBtn';
 
 export default function Home() {
 
   return (
     <main>
-      <section className='bg-createYellow h-[100vh] container mx-auto'>
+      <section className='bg-createYellow h-[80vh] container mx-auto'>
         <div className='flex flex-col items-center justify-center h-full'>
           <Image
             src='/images/logo-black.svg'
@@ -57,18 +58,19 @@ export default function Home() {
               Interview-as-a-service Model
             </p>
           </div>
-          <div className='lg:w-6/12 w-full flex flex-col bg-black text-white p-12'>
-            <p className='lg:text-xl text-lg leading-36 mb-12 w-8/12 mx-auto'>
+          <div className='lg:w-6/12 w-full flex flex-col bg-black text-white p-12 gap-12'>
+            <p className='lg:text-xl text-lg leading-36 w-8/12 mx-auto'>
             <span className='font-bold'>So, how does this 🔮 magic happen?</span> <br />
             It's simple yet powerful. We roll up our sleeves and take care of all the nitty-gritty, from collecting valuable user data to transforming it into actionable insights. 
             </p>
-            <p className='lg:text-xl text-lg leading-36 pb-12 w-8/12 mx-auto'>
+            <p className='lg:text-xl text-lg leading-36 w-8/12 mx-auto'>
               <span className='font-bold'>And guess ⏱ then what? <br /></span>
               We pass the baton to you, allowing you to take the reins and drive the project with your business vision as the guiding star.
             </p>
           </div>
         </div>
       </section>
+      {/* Difference  */}
       <section className='container bg-createYellow mx-auto'>
         <div className='mx-auto flex flex-col justify-center py-32 gap-4'>
           <div className='griddy'>
@@ -91,18 +93,19 @@ export default function Home() {
           {
             services.map((service,index) => {
               return (
-              <div className='w-full griddy justify-between bg-black tracking-[0.98px] p-10' key={index}>
-                <p className='text-white uppercase mx-auto'>{service[0]}</p>
-                <p className='text-createYellow mx-auto border-l-2 border-r-2 w-10/12 text-center'>{service[1]}</p>
-                <p className='text-white mx-auto'>{service[2]}</p>
+              <div className='lg:w-full w-11/12 mx-auto griddy justify-between bg-black tracking-[0.98px] lg:p-10 p-0 lg:text-md text-sm' key={index}>
+                <p className='text-white uppercase mx-auto lg:my-0 my-6'>{service[0]}</p>
+                <p className='text-createYellow lg:text-md lg:mb-0 mb-6 text-sm lg:mx-auto lg:border-l-2 lg:border-r-2 lg:w-10/12 w-auto text-center'>{service[1]}</p>
+                <p className='text-white lg:mx-auto lg:text-md text-sm text-center lg:mb-0 mb-6'>{service[2]}</p>
               </div>)
             })
           }
+          {/* Why choose us */}
           <div className='py-32'>
             <p className=' text-createGray lg:mb-4 mb-2 lg:text-xl text-md border-l-4 pl-2 border-createGray mx-4 lg:mx-0'>Why Choose us? </p>
             <div className='flex flex-col'>
               <div className='flex flex-col gap-4 lg:w-7/12 lg:py-20 py-10 pl-2 lg:pl-0'>
-                <h2 className='font-bold text-2xl lg:text-4xl'>
+                <h2 className='font-bold text-xl lg:text-4xl'>
                 <span className='font-bold'>            
                   <Image src='/images/thought.png' 
                   alt='users'          
@@ -111,12 +114,12 @@ export default function Home() {
                   className='inline-flex items-center mb-2 mx-2'/>
                   <span className='font-bold'>Insights in a Creative Way</span></span>
                 </h2>
-                <p className='text-bodyCopy lg:text-2xl text-lg'>
+                <p className='text-bodyCopy lg:text-2xl md:text-lg text-md'>
                   At our core, we infuse user insights with a touch of creativity and strategic thinking, igniting innovation for your business like never before.
                 </p>
               </div>
               <div className='flex flex-col gap-4 lg:w-7/12 lg:ml-auto lg:pb-20 pb-10  pl-2 lg:pl-0'>
-                <h2 className='font-bold text-2xl lg:text-4xl'>
+                <h2 className='font-bold text-xl lg:text-4xl'>
                   <span className='font-bold'>            
                     <Image src='/images/handshake.png' 
                     alt='users'          
@@ -125,12 +128,12 @@ export default function Home() {
                     className='inline-flex items-center mb-2 mx-2'/>
                     <span className='font-bold'>Insights in a Creative Way</span></span>
                   </h2>
-                  <p className='text-bodyCopy lg:text-2xl text-lg'>
+                  <p className='text-bodyCopy lg:text-2xl md:text-lg text-md'>
                     We respect your expertise in your business. We handle the research, leaving you in the driver's seat to lead your business forward.
                   </p>
               </div>
               <div className='flex flex-col gap-4 lg:w-7/12 lg:pb-20 pb-10  pl-2 lg:pl-0'>
-                <h2 className='font-bold text-2xl lg:text-4xl'>
+                <h2 className='font-bold text-xl lg:text-4xl'>
                   <span className='font-bold'>            
                     <Image src='/images/shield.png' 
                     alt='users'          
@@ -138,9 +141,9 @@ export default function Home() {
                     height={20} 
                     className='inline-flex items-center mb-2 mx-2'/>
                     <span className='font-bold'>Insights in a Creative Way</span></span>
-                  </h2>
-                <p className='text-bodyCopy lg:text-2xl text-lg'>
-                  Your user insights belong solely to you. We value your privacy, keeping all client information strictly confidential. Your trust is paramount to us.
+                </h2>
+                <p className='text-bodyCopy lg:text-2xl md:text-lg text-md'>
+                    Your user insights belong solely to you. We value your privacy, keeping all client information strictly confidential. Your trust is paramount to us.
                 </p>
               </div>
             </div>
@@ -166,6 +169,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* Convinced or Confused? */}
       <section className='bg-black'>
         <div className='container flex py-32 mx-auto'>
           <div className='lg:w-8/12 w-full'>
@@ -177,7 +181,7 @@ export default function Home() {
             </p>
           </div>
           <div className='ml-auto'>
-
+            {/* <YellowBtn text="Let's connect" goTo="/"/> */}
           </div>
         </div>
       </section>
